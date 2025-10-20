@@ -93,10 +93,10 @@
         </table>
         <p></p>
         <p></p>
-        <p></p>
-    </section id="Contacto">
-    <!--El párrafo escrito abajo nos permite que se ejecute la validación para después redirigirte a la página que quieres-->
-    <form action="https://i.pinimg.com/originals/8a/77/9a/8a779a3b6e58e7524cff71c4a0a452c6.gif" method="get">
+        <form action="https://i.pinimg.com/originals/8a/77/9a/8a779a3b6e58e7524cff71c4a0a452c6.gif" method="get">
+        <fieldset>
+            <legend>Datos Básicos</legend>
+            <p></p>
         <label>Nombre Completo</label>
         <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
         <p></p>
@@ -106,11 +106,78 @@
         <label>Tipo de Animal Deseado</label>
         <input type="text" name="text" placeholder="Escribe tu animal" required>
         <p></p>
-        <label>Fecha de Nacimiento</label>
+        <label>Fecha de Nacimiento
         <input type="date" placeholder="Escribe tu mensaje" required>
+        </label>
         <p></p>
-        <button type="submit">Enviar</button>
+        </fieldset>
+        <p></p>
+        <fieldset>
+            <p></p>
+            <legend>Fecha, hora y números</legend>
+            <label>Hora preferida</label>
+                <input type="time" name="hora" required>
+            </label>
+            <p></p>
+            <label>Cita (fecha y hora)
+                <input type="datetime-local" name="fecha y hora" placeholder="indica fecha y hora" required>
+            </label>
+            <p></p>
+            <label>Mes
+                <input type="month" name="Mes" placeholder="Introduce un Mes" required>
+                </label>
+                            <p></p>
+            <label>Prioridad ( 0 - 1000): </label>
+                    <input id="valorRango" type="range" min="0" max="1000" value="500" oninput="document.getElementById('nRango').value=this.value"> 
+                    <output id="nRango">500</output>
+                    <!--Parte de este código es JS -->
+            <p></p>
+            <label>Color:</label>
+                <input type="color" name="color" placeholder="indica color" required>
+        </fieldset>
+            <p></p>
+        <fieldset>
+            <legend>Selectores</legend>
+                <p></p>
+                <fieldset>
+                    <legend>Género</legend>
+                    <input type="radio" name="genero" value="Hombre" checked>
+                    <label>Hombre</label>
+                    <input type="radio" name="genero" value="Mujer">
+                    <label>Mujer</label>
+                    <input type="radio" name="genero" value="Kiwi">
+                    <label>Kiwi</label>
+                    <input type="radio" name="genero" value="Ñu">
+                    <label>Ñu</label>
+                </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>¿Cómo te enteraste de nosotros?</legend>
+                <input type="checkbox" name="redes" value="Redes_Sociales">
+                <label>Redes Sociales</label>
+                <input type="checkbox" name="amigos" value="Amigos">
+                <label>Amigos</label>
+                <input type="checkbox" name="publicidad" value="Publicidad">
+                <label>Publicidad</label>
+                <input type="checkbox" name="otros" value="Otros">
+                <label>Otros</label>
+        </fieldset>
+    </fieldset>
+        <p></p>
+        <label>Comentarios:</label>
+            <p></p>
+            <select name="comentarios">
+                <option value="No_especificado" selected>No especificado</option>
+                <option value="Me_encanta_la_iniciativa">Me encanta la iniciativa</option>
+                <option value="Quiero_adoptar_ya">Quiero adoptar ya</option>
+                <option value="Necesito_más_información">Necesito más información</option>
+                <option value="Tengo_dudas_sobre_el_proceso">Tengo dudas sobre el proceso</option>
+            </select>
+                <p></p>
+    <section id="Contacto">
+    <button type="submit">Enviar</button>
     </form>
+
 </body>
 
 </html>
